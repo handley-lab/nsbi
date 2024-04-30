@@ -1,0 +1,23 @@
+repos:
+  - repo: local
+    hooks:
+      - id: pydocstyle
+        name: pydocstyle
+        entry: python -m pydocstyle --convention=numpy
+        language: system
+        types: [python]
+        files: "nsbi/"
+      - id: black
+        name: black
+        args: [ "--check"  ]
+        entry: black
+        language: system
+        types: [python]
+        files: "."
+      - id: isort
+        name: isort
+        entry: isort
+        args: [ "--profile", "black", "--filter-files", "--check-only"  ]
+        language: system
+        types: [python]
+        files: "."

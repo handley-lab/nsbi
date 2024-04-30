@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Running black check"
+black --check .
+
+echo "Running isort check"
+isort --check-only --profile black .
+
+echo "Running docstring checks"
+pydocstyle --convention=numpy nsbi
+
+echo "Running code tests"
+python -m pytest

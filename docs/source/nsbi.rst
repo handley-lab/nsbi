@@ -1,5 +1,5 @@
 nsbi package
-=============
+============
 
 .. automodule:: nsbi
    :members:

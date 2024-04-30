@@ -1,5 +1,5 @@
 nsbi
-=====
+====
 
 .. toctree::
    :maxdepth: 5
